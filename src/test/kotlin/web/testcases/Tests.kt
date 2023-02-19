@@ -19,7 +19,6 @@ class Tests : Helper() {
         val taskPage = TaskPage(driver = driver)
         if (taskPage.isTestingPurposeHeaderDisplayed)
             taskPage.clickOnDismissButton()
-        //navigateToPage()
         retry { assertTrue(taskPage.isHomePageBackgroundDisplayed) }
         taskPage.clickOnMyAccountTab()
         retry { assertTrue(taskPage.isLoginHeaderDisplayed) }
